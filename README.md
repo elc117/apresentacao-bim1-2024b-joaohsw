@@ -28,16 +28,28 @@ Solução em Prolog, usando listas:
   `member(casa(carla,_,_),Casas),`\
   `ao_lado(casa(carla,_,_),casa(_,azul,_),Casas).`
 
+  **MINHA ANÁLISE DO CÓDIGO** \
+
   Inicialmente o código busca verificar se X e Y são adjacentes em uma lista
   `ao_lado(X, Y, List) :- nextto(X, Y, List). % X à esquerda de Y`\
   `ao_lado(X, Y, List) :- nextto(Y, X, List). % Y à esquerda de X`
 
-  Em seguida, cria-se uma lista Casas e se preenche com as informações do enunciado
+  Em seguida, cria-se uma lista Casas que é preenchida com a única posição que se tem certeza de acordo com o enunciado (gato na casa do meio)
   `solucao(Casas) :-`\
   `Casas = [_,casa(_,_,gato),_],`\
+
+  Logo após, são listadas todas as informações do enunciado e o código utilizando o predicado *(tipo uma função que retorna um boolean)* member tenta correlacionar as informações
   `member(casa(_,verde,cachorro),Casas),`\
   `member(casa(_,azul,_),Casas),`\
   `member(casa(_,_,hamster),Casas),`\
   `member(casa(alice,_,_),Casas),`\
   `member(casa(bob,vermelha,_),Casas),`\
   `member(casa(carla,_,_),Casas),`\
+
+  Por fim, na última linha é feita a conferência se Carla vive ao lado da casa azul
+  `ao_lado(casa(carla,_,_),casa(_,azul,_),Casas).`
+
+
+**CHECAGEM NO SWI-Prolog** \
+
+Ao digitar a query `solucao(X).` no SWI-Prolog ele vai indicar que existe mais de uma solução, para descobrir de maneira simples a quantidade de soluções utilizamos a query `findall(X, solucao(X), Solucoes), length(Solucoes, Len).` que nos dá a resposta definitiva: 2 soluções sendo elas: **[[casa(carla, verde, cachorro), casa(alice, azul, gato), casa(bob, vermelha, hamster)]**, **[casa(bob, vermelha, hamster), casa(alice, azul, gato), casa(carla, verde, cachorro)]]**
