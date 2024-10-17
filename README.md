@@ -28,3 +28,16 @@ Solução em Prolog, usando listas:
   `member(casa(carla,_,_),Casas),`\
   `ao_lado(casa(carla,_,_),casa(_,azul,_),Casas).`
 
+  Inicialmente o código busca verificar se X e Y são adjacentes em uma lista
+  `ao_lado(X, Y, List) :- nextto(X, Y, List). % X à esquerda de Y`\
+  `ao_lado(X, Y, List) :- nextto(Y, X, List). % Y à esquerda de X`
+
+  Em seguida, cria-se uma lista Casas e se preenche com as informações do enunciado
+  `solucao(Casas) :-`\
+  `Casas = [_,casa(_,_,gato),_],`\
+  `member(casa(_,verde,cachorro),Casas),`\
+  `member(casa(_,azul,_),Casas),`\
+  `member(casa(_,_,hamster),Casas),`\
+  `member(casa(alice,_,_),Casas),`\
+  `member(casa(bob,vermelha,_),Casas),`\
+  `member(casa(carla,_,_),Casas),`\
