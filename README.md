@@ -15,8 +15,8 @@ Qual a cor, o morador e o pet de cada casa?
 
 Solução em Prolog, usando listas:
 
-`ao_lado(X, Y, List) :- nextto(X, Y, List). % X à esquerda de Y`\ 
-`ao_lado(X, Y, List) :- nextto(Y, X, List). % Y à esquerda de X`\
+`ao_lado(X, Y, List) :- nextto(X, Y, List). % X à esquerda de Y` \ 
+`ao_lado(X, Y, List) :- nextto(Y, X, List). % Y à esquerda de X` \
 
 `solucao(Casas) :-`\
   `Casas = [_,casa(_,_,gato),_],`\
@@ -26,5 +26,5 @@ Solução em Prolog, usando listas:
   `member(casa(alice,_,_),Casas),`\
   `member(casa(bob,vermelha,_),Casas),`\
   `member(casa(carla,_,_),Casas),`\
-  `ao_lado(casa(carla,_,_),casa(_,azul,_),Casas).`\
+  `ao_lado(casa(carla,_,_),casa(_,azul,_),Casas).`
 
