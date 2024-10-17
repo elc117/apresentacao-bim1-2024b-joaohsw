@@ -59,6 +59,6 @@ Ao digitar a query `solucao(X).` no SWI-Prolog ele vai indicar que existe mais d
 https://stackoverflow.com/questions/42380563/finding-a-specific-sequence-of-elements-in-a-list-prolog
 https://stackoverflow.com/questions/62094580/how-does-next-predicate-work-making-two-opposite-choices
 https://www.reddit.com/r/prolog/comments/rava4a/understanding_member2_with_lists_in_predicates/
-https://www.reddit.com/r/prolog/comments/f48grt/difference_between_predicate_and_function/#:~:text=You%20can%20treat%20predicate%20as,output%20(due%20to%20unification).
+https://www.reddit.com/r/prolog/comments/f48grt/difference_between_predicate_and_function/#:~:text=You%20can%20treat%20predicate%20as,output%20(due%20to%20unification) \
 https://dcm.ffclrp.usp.br/~augusto/teaching/ia/IA-Prolog-Introducao-Tutorial.pdf
 https://pt.wikipedia.org/wiki/Problema_de_%22einstein%22
