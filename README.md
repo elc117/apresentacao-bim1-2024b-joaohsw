@@ -50,6 +50,6 @@ Solução em Prolog, usando listas:
   `ao_lado(casa(carla,_,_),casa(_,azul,_),Casas).`
 
 
-# Checagem no SWI-Prolog** \
+# Checagem no SWI-Prolog
 
 Ao digitar a query `solucao(X).` no SWI-Prolog ele vai indicar que existe mais de uma solução, para descobrir de maneira simples a quantidade de soluções utilizamos a query `findall(X, solucao(X), Solucoes), length(Solucoes, Len).` que nos dá a resposta definitiva: 2 soluções sendo elas: **[[casa(carla, verde, cachorro), casa(alice, azul, gato), casa(bob, vermelha, hamster)]**, **[casa(bob, vermelha, hamster), casa(alice, azul, gato), casa(carla, verde, cachorro)]]**
